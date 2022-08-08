@@ -29,6 +29,11 @@
 #include "../data/common.gma.h"
 #include "../data/common.nlobj.h"
 
+
+#if CURSE_BALL
+#include "cursed.h"
+#endif
+
 struct Ball *currentBallStructPtr;
 void (*minigameRelBallCallback)(struct Ball *);
 void (*lbl_802F1F10)(void);

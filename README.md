@@ -24,3 +24,7 @@ supermonkeyball.dol: `sha1: 424e8ce10135686de0709a147e6a3a5a3fda02f1`
   - mwldeppc.exe
   - lmgr326b.dll
 * Run `make` from the repository root directory. If you are using a version of CodeWarrior besides 1.1, you must run `make COMPILER_VERSION=<VERSION>` (where `<VERSION>` is your CodeWarrior version).
+
+### Cursed Monkey Ball
+
+Mod that applies terrible C macros to the game's code, resulting in~~ game corruptions~~ fun. Activated using definitions found in curseconfig.h. See curseconfig.h for a list of all config options so far and what they do. To activate one, set the define from 0 to 1. To deactivate it, set it to 0.

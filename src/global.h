@@ -76,4 +76,6 @@ static inline float __frsqrte(float n)
 #define qr0 0
 #define qr2 2
 
+#include "curseconfig.h"
+
 #endif

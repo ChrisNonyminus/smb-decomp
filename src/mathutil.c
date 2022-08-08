@@ -6,6 +6,10 @@
 #include "global.h"
 #include "mathutil.h"
 
+#if CURSE_MATHUTIL
+#include "cursed.h"
+#endif
+
 // GQR registers used for conversion
 #define GQR_F32 0
 #define GQR_U8  2
@@ -1592,6 +1596,9 @@ entry mathutil_mtx_mult
 #ifdef C_ONLY
 void mathutil_mtxA_translate_xyz(float x, float y, float z)
 {
+#ifdef mathutil_mtxA_translate_xyz_real
+    mathutil_mtxA_translate_xyz_real(x,y,z);
+#else
     Mtx *m = &mathutilData->mtxA;
 
     float a = (*m)[0][2] * z + (*m)[0][0] * x + (*m)[0][3] * 1 + (*m)[0][1] * y;
@@ -1601,6 +1608,7 @@ void mathutil_mtxA_translate_xyz(float x, float y, float z)
     (*m)[0][3] = a;
     (*m)[1][3] = b;
     (*m)[2][3] = c;
+#endif
 }
 
 void mathutil_mtxA_translate(register Vec *vec)

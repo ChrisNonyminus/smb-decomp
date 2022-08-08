@@ -16,6 +16,11 @@
 
 #include "../data/common.nlobj.h"
 
+
+#if CURSE_STCOLI
+#include "cursed.h"
+#endif
+
 void collide_ball_with_stage(struct PhysicsBall *ball, struct Stage *stage)
 {
     struct StageColiTri tri;

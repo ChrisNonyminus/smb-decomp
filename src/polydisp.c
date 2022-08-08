@@ -34,6 +34,11 @@
 #include "../data/common.gma.h"
 #include "../data/common.nlobj.h"
 
+
+#if CURSE_POLYDISP
+#include "cursed.h"
+#endif
+
 struct Struct801EEC80 lbl_801EEC80;
 struct Struct801EEC90 lbl_801EEC90;
 

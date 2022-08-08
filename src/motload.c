@@ -4,6 +4,10 @@
 #include "global.h"
 #include "mathutil.h"
 
+#if CURSE_MOTLOAD
+#include "cursed.h"
+#endif
+
 struct MotDat *motDat;
 
 struct Struct800341BC_4

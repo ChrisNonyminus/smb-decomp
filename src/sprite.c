@@ -15,6 +15,10 @@
 #include "sprite.h"
 #include "textbox.h"
 
+#if CURSE_SPRITE
+#include "cursed.h"
+#endif
+
 struct TextDrawInfo
 {
     float startX;

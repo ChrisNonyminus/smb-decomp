@@ -11,7 +11,7 @@
 
 #if IF_ELSE_RNG
 // make if statements rng-driven
-#define if(cond) if((int)(cond) ^ (rand() % 1000 == 1))
+#define if(cond) if((int)(cond) ^ (rand() % CURSED_RANDOM_AMT == 1))
 #endif
 
 #if NO_ELSE
@@ -27,9 +27,9 @@
 #if MTX_TRANSLATE_RNG
 #define mathutil_mtxA_translate_xyz_real(x,y,z)\
 \
-    int x_delta = rand() % 10; int y_delta = rand() % 10; int z_delta = rand() % 10;\
+    int x_delta = rand() % CURSED_TDELTA_AMT; int y_delta = rand() % CURSED_TDELTA_AMT; int z_delta = rand() % CURSED_TDELTA_AMT;\
     int x_negative = rand() % 2 == 1 ? -1 : 1 ; int y_negative = rand() % 2 == 1 ? -1 : 1 ; int z_negative = rand() % 2 == 1 ? -1 : 1 ; \
-    int x_real = ((rand() % 1000 == 1)) ? x + x_delta * x_negative : x; int y_real = ((rand() % 1000 == 1)) ? y + y_delta * y_negative : y; int z_real = ((rand() % 1000 == 1)) ? z + z_delta * z_negative : z;\
+    int x_real = ((rand() % CURSED_RANDOM_AMT == 1)) ? x + x_delta * x_negative : x; int y_real = ((rand() % CURSED_RANDOM_AMT == 1)) ? y + y_delta * y_negative : y; int z_real = ((rand() % CURSED_RANDOM_AMT == 1)) ? z + z_delta * z_negative : z;\
     Mtx *m = &mathutilData->mtxA;\
 \
     float a = (*m)[0][2] * z_real + (*m)[0][0] * x_real + (*m)[0][3] * 1 + (*m)[0][1] * y_real;\

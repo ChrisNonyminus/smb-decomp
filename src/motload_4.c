@@ -4,6 +4,10 @@
 #include "global.h"
 #include "mathutil.h"
 
+#if CURSE_MOTLOAD
+#include "cursed.h"
+#endif
+
 const struct Struct8003699C_child_child lbl_80114F78[] =
 {
     {  3,   1, 245,   0},

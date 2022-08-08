@@ -20,6 +20,10 @@
 #include "../data/bg_stm.gma.h"
 #include "../data/common.gma.h"
 
+#if CURSE_STOBJ
+#include "cursed.h"
+#endif
+
 struct Stobj stobjInfo[MAX_STOBJS];
 
 static s16 spawnedObjCount;

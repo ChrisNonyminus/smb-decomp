@@ -19,6 +19,11 @@
 #include "../data/bg_nig.gma.h"
 #include "../data/bg_stm.gma.h"
 
+#if CURSE_BACKGROUND
+#include "cursed.h"
+#endif
+
+
 #pragma force_active on
 
 struct BackgroundInfo backgroundInfo =

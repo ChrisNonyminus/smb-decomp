@@ -19,6 +19,10 @@
 #include "stage.h"
 #include "world.h"
 
+#if CURSE_CAMERA
+#include "cursed.h"
+#endif
+
 #define SCREEN_ASPECT (640.0f / 480.0f)
 
 // transforms a value x in the range 0.0 to 1.0 such that dy/dx approaches 0 when x approaches 1 or 0.

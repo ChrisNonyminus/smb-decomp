@@ -4,6 +4,10 @@
 #include "global.h"
 #include "mathutil.h"
 
+#if CURSE_MOTLOAD
+#include "cursed.h"
+#endif
+
 #pragma force_active on
 
 const struct Struct80034F5C_3 lbl_80114808[] =

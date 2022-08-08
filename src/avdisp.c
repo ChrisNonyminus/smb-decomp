@@ -18,6 +18,11 @@
 #include "ord_tbl.h"
 #include "types.h"
 
+#if CURSE_AVDISP
+#include "cursed.h"
+#endif
+
+
 static Mtx **avdispMtxPtrList;  // pointers to all of the animation natrixes?
 static Mtx *u_transformMtxList;  // result of matrix multiplications between mtxA and avdispMtxPtrList?
 static float s_ambientRed; // Red of AMB of lighting equation: MAT * (RAS + AMB)
